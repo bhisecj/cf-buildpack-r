@@ -67,8 +67,9 @@ else
   BUILD_PACK_VERSION="20160720-0331"
 fi
 
-S3_BUCKET="heroku-buildpack-r"
-R_BINARIES="http://${S3_BUCKET}.s3.amazonaws.com/${STACK}/R-${R_VERSION}-binaries-${BUILD_PACK_VERSION}.tar.gz"
+S3_BUCKET="buildpacks.cloudfoundry.org"
+R_BINARIES="https://${S3_BUCKET}/dependencies/r/r-v${R_VERSION}-cflinuxfs3-f90f99d5.tgz"
+#https://buildpacks.cloudfoundry.org/dependencies/r/r-v3.4.4-cflinuxfs3-f90f99d5.tgz
 
 VENDOR_DIR="$BUILD_DIR/vendor"
 
